@@ -7,21 +7,22 @@ public class Quick {
   }
   public static int partition(int[] data, int start, int end) {
     int pivI = start + (int)(Math.random() * (end - start + 1));
-    //System.out.println(pivI);
+    int piv = data[pivI];
+    System.out.println(pivI);
     //System.out.println(data[pivI]);
     swap(data, start, pivI);
     int i = start + 1;
     int i2 = end;
     while (i != i2) {
-      if (data[pivI] > data[start]) {
+      if (piv > data[i]) {
         i += 1;
       }
-      else if (data[i] >= data[pivI]){
+      else if (data[i] >= piv){
         swap(data, i, i2);
         i2 -= 1;
       }
     }
-    if (data[i] < data[pivI]) {
+    if (data[i] < piv) {
       swap(data, start, i);
       return i;
     }
