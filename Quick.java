@@ -9,7 +9,7 @@ public class Quick {
     int pivI = start + (int)(Math.random() * (end - start + 1));
     int piv = data[pivI];
     System.out.println(pivI);
-    //System.out.println(data[pivI]);
+    System.out.println(data[pivI]);
     swap(data, start, pivI);
     int i = start + 1;
     int i2 = end;
@@ -38,7 +38,7 @@ public class Quick {
   }
   public static void quickSort(int[] data, int hi, int lo) {
     if (hi <= lo) return;
-    int piv = partition(data, hi, lo);
+    int piv = partition(data, lo, hi);
     quickSort(data, lo, piv - 1);
     quickSort(data, piv + 1, hi);
   }
