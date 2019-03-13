@@ -2,13 +2,13 @@ import java.util.*;
 public class Quick {
   public static void main(String[] args) {
     int[] data = {17, 61, 67, 47, 93, 12,	20,	4, 44,	68};
-    System.out.println(partition(data, 1, 5));
+    quickSort(data, 0, 9);
     for (int i:data) System.out.print(i + " ");
   }
   public static int partition(int[] data, int start, int end) {
     int pivI = start + (int)(Math.random() * (end - start + 1));
-    System.out.println(pivI);
-    System.out.println(data[pivI]);
+    //System.out.println(pivI);
+    //System.out.println(data[pivI]);
     swap(data, start, pivI);
     int i = start + 1;
     int i2 = end;
