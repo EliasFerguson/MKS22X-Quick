@@ -35,4 +35,10 @@ public class Quick {
     data[a] = data[b];
     data[b] = temp;
   }
+  public static void quickSort(int[] data, int hi, int lo) {
+    if (hi <= lo) return;
+    int piv = partition(data, hi, lo);
+    quickSort(data, lo, piv - 1);
+    quickSort(data, piv + 1, hi);
+  }
 }
