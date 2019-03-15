@@ -42,4 +42,17 @@ public class Quick {
     quickSort(data, lo, piv - 1);
     quickSort(data, piv + 1, hi);
   }
+  public static int quickSelect(int[] data, int k) {
+    int i = 0;
+    int i2 = data.length;
+    int pivI = partition(data, 0, data.length) ;
+    if (pivI == k) return data[pivI];
+    while (pivI != i) {
+      pivI = partition(data, i, i2);
+      if (pivI == k) return data[pivI];
+      if (pivI > k) i2 = pivI - 1;
+      if (pivI < k) i =  pivI + 1;
+    }
+    return data[pivI];
+  }
 }
