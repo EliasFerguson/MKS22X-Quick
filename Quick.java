@@ -14,25 +14,23 @@ public class Quick {
   }
   public static int partition(int[] data, int start, int end) {
     int pivI = start + (int)(Math.random() * (end - start + 1));
-    int piv = data[pivI];
     //System.out.println(pivI);
     //System.out.println(data[pivI]);
     if (start == end) return start;
     swap(data, start, pivI);
     pivI = start;
-    piv = data[pivI];
     start++;
     while (start != end) {
       int same = -1;
-      if (piv > data[start]) {
+      if (data[pivI] > data[start]) {
         start += 1;
       }
-      else if (data[start] >= piv){
+      else if (data[start] >= data[pivI]){
         swap(data, start, end);
         end -= 1;
       }
     }
-    if (data[start] < piv) {
+    if (data[start] < data[pivI]) {
       swap(data, start, pivI);
       return start;
     }
