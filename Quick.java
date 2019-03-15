@@ -19,26 +19,26 @@ public class Quick {
     //System.out.println(data[pivI]);
     if (start == end) return start;
     swap(data, start, pivI);
-    int i = start + 1;
-    int i2 = end;
-    while (i != i2) {
+    pivI = start;
+    piv = data[pivI];
+    start++;
+    while (start != end) {
       int same = -1;
-      if (data[i]);
-      if (piv > data[i]) {
-        i += 1;
+      if (piv > data[start]) {
+        start += 1;
       }
-      else if (data[i] >= piv){
-        swap(data, i, i2);
-        i2 -= 1;
+      else if (data[start] >= piv){
+        swap(data, start, end);
+        end -= 1;
       }
     }
-    if (data[i] < piv) {
-      swap(data, start, i);
-      return i;
+    if (data[start] < piv) {
+      swap(data, start, pivI);
+      return start;
     }
     else {
-      swap(data, start, i - 1);
-      return i - 1;
+      swap(data, start, pivI);
+      return start - 1;
     }
   }
   public static void swap(int[] data, int a, int b) {
