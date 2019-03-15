@@ -22,6 +22,8 @@ public class Quick {
     int i = start + 1;
     int i2 = end;
     while (i != i2) {
+      int same = -1;
+      if (data[i]);
       if (piv > data[i]) {
         i += 1;
       }
