@@ -3,7 +3,7 @@ public class Quick {
   public static void main(String[] args) {
     int[] data = {17, 61, 67, 47, 93, 12,	20,	4, 44,	68};
     int[] data2 =  {0,2,5,10,15,23};
-    
+
     //System.out.println(quickSelect(data2, 0));// would return 0
     //System.out.println(quickSelect(data2, 1));//  would return 2
   //  System.out.println(quickSelect(data2, 2));//  would return 5
@@ -55,7 +55,7 @@ public class Quick {
     quicksort(data, lo, piv - 1);
     quicksort(data, piv + 1, hi);
   }
-  public static int quickSelect(int[] data, int k) {
+  public static int quickselect(int[] data, int k) {
     int i = 0;
     int i2 = data.length - 1;
     int pivI = partition(data, i, i2) ;
