@@ -2,8 +2,15 @@ import java.util.*;
 public class Quick {
   public static void main(String[] args) {
     int[] data = {17, 61, 67, 47, 93, 12,	20,	4, 44,	68};
-    quickSort(data, 0, 9);
-    for (int i:data) System.out.print(i + " ");
+    int[] data2 =  {0,2,5,10,15,23};
+    System.out.println(quickSelect(data2, 0));// would return 0
+    System.out.println(quickSelect(data2, 0));//  would return 2
+    System.out.println(quickSelect(data2, 0));//  would return 5
+    System.out.println(quickSelect(data2, 0));//  would return 10
+    System.out.println(quickSelect(data2, 0)); // would return 15
+    System.out.println(quickSelect(data2, 0));//  would return 23
+    //quickSort(data, 0, 9);
+    //for (int i:data) System.out.print(i + " ");
   }
   public static int partition(int[] data, int start, int end) {
     int pivI = start + (int)(Math.random() * (end - start + 1));
