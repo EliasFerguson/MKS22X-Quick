@@ -3,6 +3,7 @@ public class Quick {
   public static void main(String[] args) {
     int[] data = {17, 61, 67, 47, 93, 12,	20,	4, 44,	68};
     int[] data2 =  {0,2,5,10,15,23};
+    
     //System.out.println(quickSelect(data2, 0));// would return 0
     //System.out.println(quickSelect(data2, 1));//  would return 2
   //  System.out.println(quickSelect(data2, 2));//  would return 5
