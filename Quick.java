@@ -17,6 +17,7 @@ public class Quick {
     int piv = data[pivI];
     //System.out.println(pivI);
     //System.out.println(data[pivI]);
+    if (start == end) return start;
     swap(data, start, pivI);
     int i = start + 1;
     int i2 = end;
