@@ -22,10 +22,11 @@ public class Quick {
     start++;
     while (start != end) {
       int same = -1;
-      if (data[pivI] > data[start]) {
+      if (data[start] == data[pivI]) same = (int)(Math.random() * 2);
+      if (data[pivI] > data[start] || same == 0) {
         start += 1;
       }
-      else if (data[start] >= data[pivI]){
+      else if (data[start] > data[pivI] || same == 1){
         swap(data, start, end);
         end -= 1;
       }
@@ -35,7 +36,7 @@ public class Quick {
       return start;
     }
     else {
-      swap(data, start, pivI);
+      swap(data, start - 1, pivI);
       return start - 1;
     }
   }
