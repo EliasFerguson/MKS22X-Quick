@@ -71,4 +71,16 @@ public class Quick {
     }
     return data[pivI];
   }
+  public static void insertionSort(int[] ary, int lo, int hi) {
+    int switcher;
+    for (int i = lo + 1; i < hi; i++) {
+      switcher = ary[i];
+      int i2 = i;
+      while ((i2 > 0) && (switcher < ary[i2 - 1])) {
+        ary[i2] = ary[i2 - 1];
+        i2--;
+      }
+      ary[i2] = switcher;
+    }
+  }
 }
