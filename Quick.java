@@ -1,7 +1,7 @@
 import java.util.*;
 public class Quick {
   public static void main(String[] args) {
-    int[] data = {17, 61, 67, 47, 93, 12,	20,	4, 44,	68};
+    int[] data = {61, 17, 67, 47, 93, 12,	20,	4, 44, 68};
     int[] data2 =  {0,2,5,10,15,23};
 
     //System.out.println(quickSelect(data2, 0));// would return 0
@@ -54,8 +54,8 @@ public class Quick {
   }
   //Worst case is 35:1.
   public static void quicksort(int[] data, int lo, int hi) {
-    if (lo >= hi) {
-      //insertionSort(data, lo, hi - 5);
+    if (hi - lo <= 100) {
+      insertionSort(data, lo, hi);
       return;
     }
     int piv = partition(data, lo, hi);
@@ -76,7 +76,7 @@ public class Quick {
   }
   public static void insertionSort(int[] ary, int lo, int hi) {
     int switcher;
-    for (int i = lo + 1; i < hi; i++) {
+    for (int i = lo + 1; i < hi + 1; i++) {
       switcher = ary[i];
       int i2 = i;
       while ((i2 > 0) && (switcher < ary[i2 - 1])) {
