@@ -54,8 +54,8 @@ public class Quick {
   }
   //Worst case is 35:1.
   public static void quicksort(int[] data, int lo, int hi) {
-    if (lo >= hi - 4) {
-      insertionSort(data, 0, data.length);
+    if (lo >= hi) {
+      //insertionSort(data, lo, hi - 5);
       return;
     }
     int piv = partition(data, lo, hi);
