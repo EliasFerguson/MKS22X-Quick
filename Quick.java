@@ -11,7 +11,7 @@ public class Quick {
   //  System.out.println(quickSelect(data2, 4)); // would return 15
   //  System.out.println(quickSelect(data2, 5));//  would return 23
     quicksort(data);
-    for (int i:data) System.out.print(i + " ");
+    System.out.println(Arrays.toString(data));
   }
   //Cuts array into two sides around a pivot depending on value.
   public static int partition(int[] data, int start, int end) {
@@ -54,7 +54,10 @@ public class Quick {
   }
   //Worst case is 35:1.
   public static void quicksort(int[] data, int lo, int hi) {
-    if (hi <= lo) return;
+    if (lo >= hi - 4) {
+      insertionSort(data, 0, data.length);
+      return;
+    }
     int piv = partition(data, lo, hi);
     quicksort(data, lo, piv - 1);
     quicksort(data, piv + 1, hi);
